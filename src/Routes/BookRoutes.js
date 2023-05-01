@@ -8,6 +8,7 @@ router
     .get('/books/genre', BookController.getBookByGenre)
     .get('/books/author', BookController.getBookByGenre)
     .get('/books/:id', BookController.getBookById)
+    .get('books/title', BookController.getBookByTitle)
     .post('/books', BookController.registerBook)
 
 export default router
