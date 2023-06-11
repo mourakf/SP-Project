@@ -92,6 +92,23 @@ class BookController {
       res.status(500).end();
     }
   }
+  
+    static async deleteBookByTitle(req, res) {
+    try {
+      const title = req.params.title;
+      bookSchema.findByIdAndDelete(title, (err) => {
+        if (err) {
+          res.status(400).send(`${title} não encontrado`);
+        }
+        res.status(200).end();
+      });
+    } catch (error) {
+      res.status(500).end();
+    }
+  }
+  
+  
+  
 }
 
 export default BookController;
