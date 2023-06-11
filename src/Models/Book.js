@@ -26,7 +26,7 @@ const BookSchema = new mongoose.Schema({
     }
 
 })
-
+BookSchema.set("timestamps", true);
 const Books = mongoose.model('Book', BookSchema)
 await Books.createCollection();
 export default Books
