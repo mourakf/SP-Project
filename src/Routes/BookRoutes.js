@@ -10,6 +10,7 @@ router
   .get("/books/:id", BookController.getBookById)
   .get("books/title", BookController.getBookByTitle)
   .post("/books", BookController.registerBook)
-  .delete("/books/:id", BookController.deleteBookById);
+  .delete("/books/:id", BookController.deleteBookById)
+  .delete("/books/:title", BookController.deleteBookByTitle);
 
 export default router;
